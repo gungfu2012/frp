@@ -6,5 +6,5 @@ RUN apk add --no-cache --virtual .build-deps curl ca-certificates \
  && chmod +x /usr/bin/frps \
  && rm -rf /frp* frp*
 COPY frps.ini /etc/frps.config
-CMD ["/usr/bin/frps", "-c /etc/frps.config"]
+CMD ["/usr/bin/frps", "-c", "/etc/frps.config"]
 EXPOSE 80 7000
